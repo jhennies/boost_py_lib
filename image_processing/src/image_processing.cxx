@@ -188,7 +188,7 @@ boost::python::list findEdgePaths( vigra::NumpyArray<2, float> inVolume ) {
 	for ( int y = 0; y < inVolume.shape(1); y++ ) {
 		for ( int x = 0; x < inVolume.shape(0); x++ ) {
 
-			float lu = inVolume(x, y);
+//			float lu = inVolume(x, y);
 //			int coordU[2] = { x, y };
 //			Coord coordU = Coord(x, y);
 //			Coord coordV = coordU;
@@ -204,6 +204,7 @@ boost::python::list findEdgePaths( vigra::NumpyArray<2, float> inVolume ) {
 
 //					std::cout << "coordV[d] = " << coordV[d] << '\n';
 //					std::cout << "inVolume.shape(d) = " << inVolume.shape(d) << '\n';
+					float lu = inVolume(x, y);
 					float lv = inVolume( coordV[0], coordV[1] );
 //					std::cout << "lu = " << lu << '\n';
 //					std::cout << "lv = " << lv << '\n';
